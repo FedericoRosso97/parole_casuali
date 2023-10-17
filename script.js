@@ -11,21 +11,19 @@ for(let i=0;i<periodLenght;i++){
         }
     })
         .then( (response) => {
-            words = response.data.response;
-            
-           // console.log( words);
-            wordsArray.push(words," ");
+            let words = response.data.response;
+            console.log( words);
+            wordsArray.push(words);
             console.log(wordsArray);
-            period="".concat(...wordsArray);
-            console.log("".concat(...wordsArray))
+            period=period+" ".concat(wordsArray[i]);
+            console.log(period);
          })
         .catch(function (error) {
             console.log(error);
         })
-        
+       
 };
 
- 
 
 
 
