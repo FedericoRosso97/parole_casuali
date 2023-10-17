@@ -12,16 +12,20 @@ for(let i=0;i<periodLenght;i++){
     })
         .then( (response) => {
             let words = response.data.response;
-            console.log( words);
+           // console.log( words);
             wordsArray.push(words);
-            console.log(wordsArray);
+            //console.log(wordsArray);
             period=period+" ".concat(wordsArray[i]);
-            console.log(period);
+        
+            if(wordsArray.length==10){
+                console.log(period);
+            }
+
          })
         .catch(function (error) {
             console.log(error);
         })
-       
+      
 };
 
 
